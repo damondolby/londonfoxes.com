@@ -2,42 +2,10 @@
 <head>
 <title>London Foxes</title>
 <link href="lf_new.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"  ></script>
-<script type="text/javascript" src="data/fixtures.js"  ></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    loadFixtures();	 
-}); 
-
-function loadFixtures(){
-	
-	var now = new Date();
-	var displayed = 0;
-	
-	$.each(fixtures, function(i,item){
-	
-		if (displayed < 5){
-			var fixDate = new Date(item.date);			
-			
-			if (getNextDay(fixDate) > now){		
-				var fixture = item.team + ", " + item.competition + "<br />" + fixDate.toDateString() + ", " + item.time + "<br /><br />";
-				$("#fixtures").append(fixture);
-				displayed = displayed + 1;				
-			}
-		}
-	});
-}
-
-function getNextDay(date){			
-	return new Date(date.getTime() + (24 * 60 * 60 * 1000));
-}
-
-</script>
 </head>
 <body id="rightspecial">
 <div id="menu">
-	<img src="ximages/LondonFoxesHome_r1_c1.gif" width="720" height="86" border="0" alt="">
+	<img src="images/LondonFoxesHome_r1_c1.gif" width="720" height="86" border="0" alt="">
 	<ul>
 		<li><a href="index.html">Home</a></li>
 		<li><a href="gallery.html">Gallery</a></li>
@@ -75,7 +43,16 @@ function getNextDay(date){
 	  Why not join the London Foxes travelling around the country (and Europe) this season – as Premier League Champions. Please get in touch with <a href="mailto: kwells@gwc-accountants.co.uk ">Kevin Wells</a> for more information.</p>
 </div>
 
-  <p id="fixtures" class="bold">
+  <p class="bold">Hull City, Premier League<br>
+  Saturday, 13 August, 12.30 pm<br>
+  <br>Liverpool, Premier League<br>
+  Saturday, 10 September, 5.30 pm<br> 
+  <br>Manchester United, Premier League<br>
+  Saturday, 24 September, 12.30 pm<br>
+   <br>Chelsea, Premier League<br>
+  Saturday, 15 October, 3.00 pm<br> 
+    <br>Tottenham Hotspur, Premier League<br>
+  Saturday, 29 Otober, 3.00 pm<br>    <br>
   </p>
 
   <div id="white">
